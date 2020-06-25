@@ -23,7 +23,7 @@ export const infos = {
     project_description: '',
     project_link: '',
     project_command: '',
-    project_tecnologies: 'NODE',
+    project_technologies: 'NODE',
     project_markdown: '',
     user_name: '',
     user_linkedin: '',
@@ -39,23 +39,23 @@ export const rl = readline.createInterface({
 
 function get_name() {
     return new Promise(resolve => {
-        rl.question('> Qual o nome do Projeto: ', resp => {
+        rl.question('> Qual o nome do Projeto no Github: ', resp => {
             infos.project_name = resp
             resolve(resp)
         })
     })
 };
 
-function get_subtitle() {
+function get_linkProject() {
     return new Promise(resolve => {
-        rl.question('> Qual o link do projeto gitHub: ', resp => {
+        rl.question('> Qual o link do projeto Github: ', resp => {
             infos.project_link = resp
             resolve(resp)
         })
     })
 };
 
-function get_linkProject() {
+function get_subtitle() {
     return new Promise(resolve => {
         rl.question('> Qual o subtitulo do projeto: ', resp => {
             infos.project_subtitle = resp
@@ -105,6 +105,15 @@ function get_userGit() {
         })
     })
 }
+function get_technologies() {
+    return new Promise(resolve => {
+        rl.question('> Qual as Tecnologias utilizadas: ', resp => {
+            infos.project_technologies = resp
+            resolve(resp)
+        })
+    })
+}
+
 
 async function get_markdown() {
    return new Promise(resolve => {
@@ -114,25 +123,29 @@ async function get_markdown() {
 }
 
 function read_structure() {
-    return new Promise((resolve, reject) =>{
-        try {
+    return new Promise((resolve, reject) =>{          //\
+        try {                                        // \\
             const get_markdownText = fs.readFileSync(path.join(__dirname, '..', 'structure.txt')).toString()
-            infos.project_markdown = get_markdownText
-            resolve()             
-        } catch (e) {
-            reject(e)
-        }
-    })        
-    
-}
-const jsonInfo = fs.readFileSync(path.join(__dirname, '..', '..', 'package.json'))
-console.log(jsonInfo)
-export const openCli = async () => {
-        await get_markdown(), // Cria estrutura de pastas
-        await get_name(), //Nome do projeto
-        await get_username(), //Nome do criador
-        await get_description(), //Descricao do projeto
-        await get_cmd() // Comando de install
-        await read_structure() // Leitura da estrutura de pastas
-        sendMessageConsole()
+            infos.project_markdown = get_markdownText    
+            resolve()                             //       \\
+        } catch (e) {                            //         \\
+            reject(e)                           //           \\
+        }                                      //             \\
+    })                                        //git: brunobach \\
+                                             // IN:  bruno-bach \\
+}                                           //                   \\
+                                           //                     \\
+export const openCli = async () => {      //                       \\
+        await get_markdown()             // Cria estrutura de pastas\\
+        await get_username()            //      Nome do criador      \\
+        await get_name()               //       Nome do projeto       \\
+        await get_subtitle()          //     Subtitulo do projeto      \\
+        await get_linkProject()      //       Link do projeto git       \\
+        await get_userLinkedin()    //          Usuario Linkedin         \\
+        await get_userGit()        //            Usuario GitHub           \\
+        await get_technologies()   //            Nome do criador            \\
+        await get_description()  //           Descricao do projeto          \\ 
+        await get_cmd()         //             Comando de install            \\
+        await read_structure() //        Leitura da estrutura de pastas       \\
+        sendMessageConsole()  //           Envia a mensagem de sucesso         \\
 }
