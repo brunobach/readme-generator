@@ -1,0 +1,15 @@
+📂 -- src
+    |-- directoryList.md
+    |-- index.ts
+    |-- structure.txt
+    📂 -- config
+        |-- generate.js
+        |-- index.js
+    📂 -- dist
+        |-- README.md
+    📂 -- functions
+        |-- cli.ts
+        |-- generated_arquive.ts
+    📂 -- layouts
+        |-- default.md
+        |-- layout.md
