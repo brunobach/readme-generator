@@ -1,11 +1,11 @@
 <h1 align="center">Welcome to readme-generator 🚀</h1>
 <h4 align="center"> 
-	Create README.md now with readme-generator 1.0 🚀 Done!
+	subtitulo qualquer 1.0 🚀 Done!
 </h4>
 <p align="center">	
 	  <img alt="Repository size" src="https://img.shields.io/github/repo-size/brunobach/readme-generator">
 	  <a href="https://linkedin.com/in/bruno-bach">
-    <img alt="Made by DanielObara" src="https://img.shields.io/badge/made%20by-bruno-bach">
+    <img alt="Made by Bruno Bach" src="https://img.shields.io/badge/made%20by-bruno-bach">
   </a>
   
   <a href="https://github.com/brunobach/readme-generator/commits/master">
@@ -31,24 +31,22 @@
 
 ## ✍ Description: What is my project about??
 
-> This readme.md was created with the readme-generator, simple, easy and functional. You can try to generate your logo here below with the installation example.
+> Descricao qualquer
 
 ## 💻 Project Estructure
 
 ```bash
- 📂 -- src
+📂 -- src
     |-- index.ts
-    |-- structure.txt
-    📂 -- config
-        |-- index.js
     📂 -- dist
-        |-- README.md
     📂 -- functions
         |-- cli.ts
         |-- generated_arquive.ts
     📂 -- layouts
-        |-- default.md
         |-- layout.md
+    📂 -- util
+        |-- generateFolders.ts
+
 ```
 
 ## 🛸 Technologies
@@ -69,7 +67,7 @@ From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/brunobach/readme-generator/
+$ git clone link qualquer
 
 # Go into the repository
 $ cd readme-generator
@@ -81,7 +79,7 @@ $ yarn install
 
 ### 📲 Or scan QR code on device
 <h1 align="center">
-  <img alt="QRcode Git" title="QRcode Git" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://github.com/brunobach/readme-generator/" width="150px" />
+  <img alt="QRcode Git" title="QRcode Git" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=link qualquer" width="150px" />
 </h1>
 
 
@@ -96,7 +94,7 @@ _After merging your receipt request to done, you can delete a branch from yours_
 
 ## 📝 License
 
-This project is under the MIT license. See the [LICENSE](https://github.com/brunobach/readme-generator//blob/master/LICENSE) for details.
+This project is under the MIT license. See the [LICENSE](link qualquer/blob/master/LICENSE) for details.
 
 Made with ♥ by Bruno Bach :wave: [Get in touch!](https://www.linkedin.com/in/bruno-bach/)
 

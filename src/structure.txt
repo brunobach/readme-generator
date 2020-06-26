@@ -1,11 +1,10 @@
 📂 -- src
     |-- index.ts
-    📂 -- config
-        |-- index.js
     📂 -- dist
-        |-- README.md
     📂 -- functions
         |-- cli.ts
         |-- generated_arquive.ts
     📂 -- layouts
         |-- layout.md
+    📂 -- util
+        |-- generateFolders.ts

@@ -7,7 +7,7 @@
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/<%= user_github %>/<%= project_name %>">
 	<% } -%>
   <a href="https://linkedin.com/in/<%= user_linkedin %>">
-    <img alt="Made by DanielObara" src="https://img.shields.io/badge/made%20by-<%= user_linkedin %>">
+    <img alt="Made by <%= user_name %>" src="https://img.shields.io/badge/made%20by-<%= user_linkedin %>">
   </a>
   
   <a href="https://github.com/<%= user_github %>/<%= project_name %>/commits/master">

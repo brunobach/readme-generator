@@ -3,7 +3,7 @@ import path from 'path';
 import fs from 'fs';
 import boxen from 'boxen';
 
-import * as Mark from '../config/'
+import {main} from '../util/generateFolders'
 
 
 const config_boxen = {
@@ -15,6 +15,7 @@ const config_boxen = {
 const success_msg = `/dist/README.md foi gerado com sucesso!.
 Obrigado por usar o gerador de README.md 😍`
 
+const srcFolders = path.join(__dirname, '..', '..')
 const sendMessageConsole = () => process.stdout.write(boxen(success_msg, config_boxen))
 
 export const infos = {
@@ -39,7 +40,7 @@ export const rl = readline.createInterface({
 
 function get_name() {
     return new Promise(resolve => {
-        rl.question('> Qual o nome do Projeto no Github: ', resp => {
+        rl.question('🤔 > Qual o nome do Projeto no Github: ', resp => {
             infos.project_name = resp
             resolve(resp)
         })
@@ -48,7 +49,7 @@ function get_name() {
 
 function get_linkProject() {
     return new Promise(resolve => {
-        rl.question('> Qual o link do projeto Github: ', resp => {
+        rl.question('🤔 > Qual o link do projeto Github: ', resp => {
             infos.project_link = resp
             resolve(resp)
         })
@@ -57,7 +58,7 @@ function get_linkProject() {
 
 function get_subtitle() {
     return new Promise(resolve => {
-        rl.question('> Qual o subtitulo do projeto: ', resp => {
+        rl.question('🤔 > Qual o subtitulo do projeto: ', resp => {
             infos.project_subtitle = resp
             resolve(resp)
         })
@@ -66,7 +67,7 @@ function get_subtitle() {
 
 function get_description() {
     return new Promise(resolve => {
-        rl.question('> Qual A Descricao: ', resp => {
+        rl.question('🤔 > Qual A Descricao: ', resp => {
             infos.project_description = resp
             resolve(resp)
         })
@@ -74,7 +75,7 @@ function get_description() {
 }
 function get_cmd() {
     return new Promise(resolve => {
-        rl.question('> Qual o cmd install: ', resp => {
+        rl.question('🤔 > Qual o cmd install: ', resp => {
             infos.project_command = resp
             resolve(resp)
 
@@ -83,7 +84,7 @@ function get_cmd() {
 }
 function get_username() {
     return new Promise(resolve => {
-        rl.question('> Seu nome: ', resp => {
+        rl.question('🤔 > Seu nome: ', resp => {
             infos.user_name = resp
             resolve(resp)
         })
@@ -91,7 +92,7 @@ function get_username() {
 }
 function get_userLinkedin() {
     return new Promise(resolve => {
-        rl.question('> Seu usuario Linkedin: ', resp => {
+        rl.question('🤔 > Seu usuario Linkedin: ', resp => {
             infos.user_linkedin = resp
             resolve(resp)
         })
@@ -99,7 +100,7 @@ function get_userLinkedin() {
 }
 function get_userGit() {
     return new Promise(resolve => {
-        rl.question('> Seu usuario github: ', resp => {
+        rl.question('🤔 > Seu usuario github: ', resp => {
             infos.user_github = resp
             resolve(resp)
         })
@@ -107,20 +108,13 @@ function get_userGit() {
 }
 function get_technologies() {
     return new Promise(resolve => {
-        rl.question('> Qual as Tecnologias utilizadas: ', resp => {
+        rl.question('🤔 > Qual as Tecnologias utilizadas: ', resp => {
             infos.project_technologies = resp
             resolve(resp)
         })
     })
 }
 
-
-async function get_markdown() {
-   return new Promise(resolve => {
-        Mark.main()
-        resolve()
-   })  
-}
 
 function read_structure() {
     return new Promise((resolve, reject) =>{          //\
@@ -136,7 +130,7 @@ function read_structure() {
 }                                           //                   \\
                                            //                     \\
 export const openCli = async () => {      //                       \\
-        await get_markdown()             // Cria estrutura de pastas\\
+        main(srcFolders)                 // Cria estrutura de pastas\\
         await get_username()            //      Nome do criador      \\
         await get_name()               //       Nome do projeto       \\
         await get_subtitle()          //     Subtitulo do projeto      \\
