@@ -1,8 +1,17 @@
 {
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "The readme-generator, simple, easy and functional. You can try to generate your logo here below with the installation example.",
+  "main": "index.ts",
+  "scripts": {
+    "new-readme": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "Bruno Bach",
+  "license": "ISC",
   "dependencies": {
     "boxen": "^4.2.0",
-    "ejs": "^3.1.3",
-    "mddir": "^1.1.1"
+    "ejs": "^3.1.3"
   },
   "devDependencies": {
     "@types/ejs": "^3.0.4",

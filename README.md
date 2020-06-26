@@ -33,22 +33,31 @@
 
 > This readme.md was created with the readme-generator, simple, easy and functional. You can try to generate your logo here below with the installation example.
 
+```js
+// Example generate in vscode
+> ts-node src/index.ts
+
+```
+
+<h1 align="center">
+  <img alt="Example" title="Example VScode" src="https://s7.gifyu.com/images/readme-generator.gif" />
+</h1>
+
 ## 💻 Project Estructure
 
 ```bash
- 📂 -- src
+📂 -- src
     |-- index.ts
     |-- structure.txt
-    📂 -- config
-        |-- index.js
     📂 -- dist
         |-- README.md
     📂 -- functions
         |-- cli.ts
         |-- generated_arquive.ts
     📂 -- layouts
-        |-- default.md
         |-- layout.md
+    📂 -- util
+        |-- generateFolders.ts
 ```
 
 ## 🛸 Technologies
@@ -103,6 +112,4 @@ Made with ♥ by Bruno Bach :wave: [Get in touch!](https://www.linkedin.com/in/b
 [nodejs]: https://nodejs.org/
 [typescript]: https://www.typescriptlang.org/
 [EJS]: https://ejs.co/
-[reactjs]: https://reactjs.org
-[rn]: https://facebook.github.io/react-native/
 [yarn]: https://yarnpkg.com/
