@@ -5,7 +5,7 @@
 <p align="center">	
 	  <img alt="Repository size" src="https://img.shields.io/github/repo-size/brunobach/readme-generator">
 	  <a href="https://linkedin.com/in/bruno-bach">
-    <img alt="Made by DanielObara" src="https://img.shields.io/badge/made%20by-bruno-bach">
+    <img alt="Made by BrunoBach" src="https://img.shields.io/badge/made%20by-bruno-bach">
   </a>
   
   <a href="https://github.com/brunobach/readme-generator/commits/master">
